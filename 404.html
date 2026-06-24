@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 找不到页面 | 贵阳市第三十四中学学生吐槽站</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap');
+
+        :root {
+            --primary: #0055A5;
+            --secondary: #00A0E9;
+            --accent: #F5C518;
+            --text: #2c3e50;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+            background: linear-gradient(135deg, #ebf3fd 0%, #d4e4f9 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 背景LOGO水印保持一致 */
+        .bg-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 720px;
+            height: 720px;
+            background: url('logo.png') center/contain no-repeat;
+            opacity: 0.04;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .error-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 3.5rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 85, 165, 0.15);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            border-top: 8px solid var(--primary);
+        }
+
+        .error-code {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 7.5rem;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            background: #f8fbff;
+            padding: 1.2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            line-height: 1.7;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            box-shadow: 0 8px 20px rgba(0, 85, 165, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 85, 165, 0.45);
+        }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            background: #e2e8f0;
+            color: #1e293b;
+            transform: translateY(-3px);
+        }
+
+        /* 移动端响应式优化 */
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 2.5rem 1.5rem;
+            }
+            .error-code {
+                font-size: 5.5rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-logo"></div>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1>抱歉，走错校区了？</h1>
+        <div class="error-message">
+            你访问的网页路径不存在。<br>
+            它可能已经被教官没收，或者像心理咨询室一样长期处于关闭状态。
+        </div>
+        <div class="btn-group">
+            <a href="index.html" class="btn btn-primary">返回吐槽主页</a>
+            <a href="javascript:history.back()" class="btn btn-secondary">返回上一页</a>
+        </div>
+    </div>
+</body>
+</html>

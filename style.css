@@ -204,3 +204,72 @@ footer p {
     .card { padding: 1.6rem; }
     .hope { font-size: 1.55rem; padding: 2.2rem 1.5rem; }
 }
+/* ... 保留原有样式 ... */
+
+/* 🌟 新增：学生反馈列表样式 */
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.feedback-item {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 85, 165, 0.06);
+    border-left: 5px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.feedback-item:hover {
+    transform: translateY(-2px);
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.feedback-user {
+    font-weight: 700;
+    color: #475569;
+}
+
+.feedback-tag {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.feedback-time {
+    color: #94a3b8;
+}
+
+.feedback-content {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.loading-text, .error-text {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    font-style: italic;
+}
+
+.error-text {
+    color: #ef4444;
+}
+

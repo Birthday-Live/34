@@ -57,7 +57,7 @@ function escapeHtml(string) {
 
 // 原有的发邮件逻辑
 document.getElementById('rage-btn').addEventListener('click', function() {
-    const mailtoUrl = "mailto:admin@cnm34zhongxue.cc.cd?subject=34中吐槽投稿&body=我的吐槽/建议内容：%0A%0A（请在这里写下你的反馈，越详细越好）%0A%0A匿名投稿也可";
+    const mailtoUrl = "mailto:admin@20110202.top?subject=34中吐槽投稿&body=我的吐槽/建议内容：%0A%0A（请在这里写下你的反馈，越详细越好）%0A%0A匿名投稿也可";
     window.location.href = mailtoUrl;
     
     document.body.classList.add('flash-effect');

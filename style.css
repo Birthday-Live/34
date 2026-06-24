@@ -1,0 +1,219 @@
+/* styles.css - 贵阳市第三十四中学吐槽站 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap');
+
+:root {
+    --primary: #0055A5;     /* LOGO主蓝 */
+    --secondary: #00A0E9;   /* LOGO亮蓝 */
+    --accent: #F5C518;      /* 金色 */
+    --dark: #1a2639;
+    --light: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d4e0f0 100%);
+    color: #333;
+    line-height: 1.75;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 背景LOGO水印 */
+.bg-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 650px;
+    background: url('logo.png') center/contain no-repeat;
+    opacity: 0.07;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+/* 容器 */
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+    padding: 2rem 0 1.5rem;
+}
+
+.school-logo {
+    width: 135px;
+    height: 135px;
+    border: 8px solid white;
+    border-radius: 50%;
+    box-shadow: 0 12px 35px rgba(0, 85, 165, 0.35);
+    margin-bottom: 1.3rem;
+    transition: all 0.4s ease;
+    background: white;
+}
+
+.school-logo:hover {
+    transform: scale(1.08) rotate(6deg);
+    box-shadow: 0 18px 45px rgba(0, 85, 165, 0.45);
+}
+
+h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.85rem;
+    color: var(--primary);
+    margin-bottom: 0.6rem;
+    text-shadow: 0 4px 15px rgba(0, 85, 165, 0.2);
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* 警告条 */
+.warning {
+    background: linear-gradient(90deg, #fff8e1, #ffeaa7);
+    color: #9f6b00;
+    padding: 1.1rem 1.8rem;
+    border-radius: 14px;
+    border-left: 7px solid var(--accent);
+    margin: 2.2rem 0;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 吐槽卡片 */
+.rant {
+    background: white;
+    border-radius: 20px;
+    padding: 2.4rem;
+    margin-bottom: 2.2rem;
+    box-shadow: 0 15px 40px rgba(0, 85, 165, 0.12);
+    transition: all 0.3s ease;
+    border: 1px solid #e3eaf4;
+}
+
+.rant:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 55px rgba(0, 85, 165, 0.18);
+}
+
+.rant h2 {
+    color: var(--primary);
+    font-size: 1.7rem;
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 4px solid var(--accent);
+    display: inline-block;
+}
+
+/* 列表 */
+.rant ul {
+    list-style: none;
+}
+
+.rant li {
+    padding: 1rem 1.3rem;
+    margin-bottom: 0.8rem;
+    background: #f8fbff;
+    border-radius: 14px;
+    position: relative;
+    padding-left: 2.6rem;
+    transition: all 0.25s;
+    border-left: 4px solid var(--secondary);
+}
+
+.rant li:hover {
+    background: #f0f7ff;
+    transform: translateX(10px);
+}
+
+.rant li:before {
+    content: "●";
+    position: absolute;
+    left: 1.1rem;
+    color: var(--secondary);
+    font-size: 1.4rem;
+    top: 1rem;
+}
+
+/* 高亮 */
+.highlight {
+    background: linear-gradient(110deg, #fff3cd, #ffe38a);
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #c8102e;
+}
+
+/* 大字寄语 */
+.big-text {
+    font-size: 1.95rem;
+    font-weight: 700;
+    color: var(--dark);
+    background: white;
+    padding: 3.2rem 2.8rem;
+    border-radius: 26px;
+    box-shadow: 0 20px 45px rgba(0, 85, 165, 0.15);
+    margin: 3rem 0;
+    line-height: 1.55;
+    border: 3px solid var(--accent);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 4.5rem;
+    padding: 2.5rem 1rem;
+}
+
+footer p {
+    color: #555;
+    margin-bottom: 1.4rem;
+    font-size: 1.1rem;
+}
+
+#rage-btn {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 1.1rem 3.2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0, 85, 165, 0.45);
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+}
+
+#rage-btn:hover {
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 18px 40px rgba(0, 85, 165, 0.55);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .school-logo { width: 110px; height: 110px; }
+    h1 { font-size: 2.35rem; }
+    .rant { padding: 1.8rem 1.4rem; }
+    .big-text { font-size: 1.6rem; padding: 2.4rem 1.8rem; }
+}
